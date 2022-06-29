@@ -1,0 +1,35 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.ContaBancaria;
+
+public class Conta {
+	
+	public static void main(String[] args) {
+	
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner(System.in);
+	
+	
+	System.out.println("Enter number count: ");
+	int numeroConta = sc.nextInt();
+	
+	System.out.println();
+	System.out.println("Enter name user: ");
+	System.out.print("Name: ");
+	String name = sc.nextLine();
+	
+	System.out.println();
+	System.out.print("Enter the saldo count: ");
+	double saldo = sc.nextDouble();
+	
+	
+	ContaBancaria contaBancaria = new ContaBancaria(numeroConta , name, saldo);
+	
+	
+	sc.close();
+	
+	}
+}
